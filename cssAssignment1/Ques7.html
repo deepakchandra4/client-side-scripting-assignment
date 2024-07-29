@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Grades</title>
+</head>
+<body>
+  <script>
+    function calculateAverage(marks) {
+      let total = 0;
+      for (let i = 0; i < marks.length; i++) {
+        total += marks[i];
+      }
+      return total / marks.length;
+    }
+
+    function determineGrade(average) {
+      if (average < 60) {
+        return 'F';
+      } else if (average < 70) {
+        return 'D';
+      } else if (average < 80) {
+        return 'C';
+      } else if (average < 90) {
+        return 'B';
+      } else {
+        return 'A';
+      }
+    }
+
+    // Example student marks
+    const studentMarks = [75, 85, 95, 70, 80];
+    const average = calculateAverage(studentMarks);
+    const grade = determineGrade(average);
+
+    document.write('Average Marks:', average.toFixed(2) ,'<br>');
+    document.write('Grade:', grade);
+  </script>
+</body>
+</html>
