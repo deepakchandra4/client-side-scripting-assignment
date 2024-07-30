@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let p = parseInt(prompt("Enter principle"));
+        let r = parseInt(prompt("Enter rate"));
+        let t = parseInt(prompt("Enter time"));
+        let SI = (p * r * t) / 100;
+
+
+        //Normal Function in JS
+        function simpleInterest ( p , r ,t , SI){
+            document.write("first ",SI);
+        }
+
+        //Constructor function in JS
+
+        function ConstructorSI (p ,r , t , SI) {
+            this.p = p;
+            this.r = r;
+            this.t = t;
+            this.calculateSI = function(){
+                return (this.SI);
+            };
+        }
+        let interestCalculator = new ConstructorSI(p ,r , t, SI);
+        let interest = interestCalculator.interestCalculator();
+        document.write("Second : " , interest);
+       
+
+
+        //Literal Function in JS
+
+        let literalFunction = function( p , r, t, SI){
+            document.write("third ", SI);
+        }
+
+        simpleInterest(p , r, t , SI)
+        literalFunction(p , r, t , SI)
+    </script>
+</body>
+</html>
