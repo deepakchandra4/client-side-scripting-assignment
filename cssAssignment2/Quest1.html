@@ -4,29 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Check Array Input</title>
 </head>
 
 <body>
     <script>
-        let input = prompt("Enter a value to check input is array or not");
-        function CheckInput(input) {
-            let parsedInput ;
-
-            try{
-                parsedInput = JSON.parse(input);
-            }catch(e){
-                document.write("Input is not Array format");
-            }
-
-
-            if(Array.isArray(parsedInput)){
-                document.write("input is array");
+        let input = prompt("Enter a value to check input is array or not : ");
+        function checkInput (input){
+            let convertToJson = JSON.parse(input);
+            if(Array.isArray(convertToJson)){
+                document.write("Input is an Array");
             }else{
-                document.write("input is not array");
+                document.write("Input is not an Array");
             }
         }
-        CheckInput(input);
+        checkInput(input);
     </script>
 </body>
 

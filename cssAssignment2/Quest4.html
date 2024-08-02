@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input =  prompt("Give Array :  ");
+        const lastElementArray = (input) => {
+            let count = input.length - 1 ;
+            for(let i = 0 ; i <= input.length ; i++ ){
+                if(i == count){
+                    console.log("Last ELement of given array is : " , input[i]);
+                }
+            }
+        }
+        lastElementArray(input);
+    </script>
+</body>
+</html>

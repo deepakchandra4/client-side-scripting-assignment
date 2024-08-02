@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array to String</title>
+</head>
+
+<body>
+    <script>
+        let input = prompt("Enter an array : ['example' , 'array']");
+        const joinElement = (input) => {
+            let array = JSON.parse(input); //parsing input string into js array
+
+            if (Array.isArray(array)) {
+                let arrToString = array.join(',');
+                document.write(arrToString);
+            } else {
+                document.write("Input is not an array");
+            }
+        }
+        joinElement(input);
+    </script>
+</body>
+
+</html>
